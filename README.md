@@ -21,3 +21,5 @@ Only `public/` and bundled application files enter the build; local status/audit
 ## Animated download
 
 The viewer’s Download GLB button bakes six seconds of the displayed animation into a loop, including the base and costume rigs, facial morphs, and spring motion. Only selected geometry and the dormant tongue are included. Keep the tab visible while preparing the file. Downloaded motion plays in standard GLB viewers without the lab runtime. `npm test` verifies both skins, facial animation, selected-mesh filtering, round-trip deformation, and source preservation.
+
+Builds check first-party source, GLB metadata, and generated output for local filesystem paths before publication. Upstream vendor files and required license notices remain unmodified.
