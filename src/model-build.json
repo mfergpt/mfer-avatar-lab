@@ -1,0 +1,875 @@
+{
+  "file": "assets/new-traits.glb",
+  "meshes": [
+    {
+      "name": "type_brain",
+      "vertices": 14270,
+      "morphs": [
+        "Basis",
+        "brainWobble"
+      ],
+      "bounds": [
+        [
+          -94.23725891113281,
+          105.2557144165039
+        ],
+        [
+          1.1382880210876465,
+          239.6146697998047
+        ],
+        [
+          -39.70619583129883,
+          28.232322692871094
+        ]
+      ]
+    },
+    {
+      "name": "brain_capsule",
+      "vertices": 338,
+      "morphs": [],
+      "bounds": [
+        [
+          -28.855186462402344,
+          26.856721878051758
+        ],
+        [
+          229.5,
+          244.12335205078125
+        ],
+        [
+          -33.53042221069336,
+          22.170804977416992
+        ]
+      ]
+    },
+    {
+      "name": "eyes_expressive",
+      "vertices": 1008,
+      "morphs": [
+        "Basis",
+        "eyeBlinkLeft",
+        "eyeBlinkRight",
+        "eyeWide",
+        "eyeLookUp",
+        "eyeLookDown",
+        "eyeLookLeft",
+        "eyeLookRight",
+        "eyeSquintLeft",
+        "eyeSquintRight"
+      ],
+      "bounds": [
+        [
+          -5.800000190734863,
+          8.699999809265137
+        ],
+        [
+          212.85000610351562,
+          223.5500030517578
+        ],
+        [
+          25.006074905395508,
+          29.2662296295166
+        ]
+      ]
+    },
+    {
+      "name": "brows_expressive",
+      "vertices": 640,
+      "morphs": [
+        "Basis",
+        "browInnerUp",
+        "browOuterUpLeft",
+        "browOuterUpRight",
+        "browDownLeft",
+        "browDownRight"
+      ],
+      "bounds": [
+        [
+          -6.9201979637146,
+          9.820197105407715
+        ],
+        [
+          226.35098266601562,
+          228.91798400878906
+        ],
+        [
+          21.95207977294922,
+          25.198579788208008
+        ]
+      ]
+    },
+    {
+      "name": "hoodie_frog",
+      "vertices": 9027,
+      "morphs": [],
+      "bounds": [
+        [
+          -44.6896858215332,
+          43.8784294128418
+        ],
+        [
+          166.71055603027344,
+          263.0
+        ],
+        [
+          -53.93883514404297,
+          26.546520233154297
+        ]
+      ]
+    },
+    {
+      "name": "shirt_frog",
+      "vertices": 7294,
+      "morphs": [],
+      "bounds": [
+        [
+          -69.70993041992188,
+          74.87867736816406
+        ],
+        [
+          99.95204162597656,
+          176.23797607421875
+        ],
+        [
+          -11.21296501159668,
+          12.43242073059082
+        ]
+      ]
+    },
+    {
+      "name": "hair_ponytail",
+      "vertices": 6916,
+      "morphs": [],
+      "bounds": [
+        [
+          -36.43054962158203,
+          60.16143798828125
+        ],
+        [
+          179.52047729492188,
+          259.1960754394531
+        ],
+        [
+          -58.15575408935547,
+          21.273883819580078
+        ]
+      ]
+    },
+    {
+      "name": "smoke_cigar",
+      "vertices": 1742,
+      "morphs": [],
+      "bounds": [
+        [
+          4.674375534057617,
+          24.686500549316406
+        ],
+        [
+          187.24110412597656,
+          198.04319763183594
+        ],
+        [
+          22.49408531188965,
+          60.53358840942383
+        ]
+      ]
+    },
+    {
+      "name": "bubblegum",
+      "vertices": 1968,
+      "morphs": [
+        "Basis",
+        "bubbleInflate",
+        "bubblePop"
+      ],
+      "bounds": [
+        [
+          -0.4263209402561188,
+          0.43177008628845215
+        ],
+        [
+          195.8932647705078,
+          196.71702575683594
+        ],
+        [
+          22.315399169921875,
+          23.239398956298828
+        ]
+      ]
+    },
+    {
+      "name": "hoodie_axolotl",
+      "vertices": 10623,
+      "morphs": [],
+      "bounds": [
+        [
+          -63.088165283203125,
+          63.088165283203125
+        ],
+        [
+          166.71055603027344,
+          275.1549987792969
+        ],
+        [
+          -53.93883514404297,
+          26.546520233154297
+        ]
+      ]
+    },
+    {
+      "name": "shirt_axolotl",
+      "vertices": 7306,
+      "morphs": [],
+      "bounds": [
+        [
+          -69.70993041992188,
+          74.87867736816406
+        ],
+        [
+          99.95204162597656,
+          175.88186645507812
+        ],
+        [
+          -11.21296501159668,
+          12.43242073059082
+        ]
+      ]
+    },
+    {
+      "name": "hoodie_rabbit",
+      "vertices": 5593,
+      "morphs": [],
+      "bounds": [
+        [
+          -44.6896858215332,
+          43.8784294128418
+        ],
+        [
+          166.71055603027344,
+          293.06201171875
+        ],
+        [
+          -53.93883514404297,
+          26.546520233154297
+        ]
+      ]
+    },
+    {
+      "name": "shirt_rabbit",
+      "vertices": 7560,
+      "morphs": [],
+      "bounds": [
+        [
+          -69.70993041992188,
+          74.87867736816406
+        ],
+        [
+          99.95204162597656,
+          175.88186645507812
+        ],
+        [
+          -11.21296501159668,
+          12.43242073059082
+        ]
+      ]
+    },
+    {
+      "name": "hoodie_fox",
+      "vertices": 6611,
+      "morphs": [],
+      "bounds": [
+        [
+          -44.6896858215332,
+          43.8784294128418
+        ],
+        [
+          166.71055603027344,
+          276.0175476074219
+        ],
+        [
+          -53.93883514404297,
+          27.355464935302734
+        ]
+      ]
+    },
+    {
+      "name": "shirt_fox",
+      "vertices": 8466,
+      "morphs": [],
+      "bounds": [
+        [
+          -69.70993041992188,
+          74.87867736816406
+        ],
+        [
+          99.95204162597656,
+          175.88186645507812
+        ],
+        [
+          -11.21296501159668,
+          12.43242073059082
+        ]
+      ]
+    },
+    {
+      "name": "hoodie_shark",
+      "vertices": 7181,
+      "morphs": [],
+      "bounds": [
+        [
+          -44.6896858215332,
+          43.8784294128418
+        ],
+        [
+          166.71055603027344,
+          274.6600036621094
+        ],
+        [
+          -53.93883514404297,
+          26.546520233154297
+        ]
+      ]
+    },
+    {
+      "name": "shirt_shark",
+      "vertices": 8516,
+      "morphs": [],
+      "bounds": [
+        [
+          -69.70993041992188,
+          74.87867736816406
+        ],
+        [
+          99.95204162597656,
+          175.88186645507812
+        ],
+        [
+          -11.21296501159668,
+          12.70934772491455
+        ]
+      ]
+    },
+    {
+      "name": "bottoms_jeans",
+      "vertices": 3729,
+      "morphs": [],
+      "bounds": [
+        [
+          -18.563905715942383,
+          20.794273376464844
+        ],
+        [
+          13.0,
+          110.0
+        ],
+        [
+          -6.949999809265137,
+          9.57369327545166
+        ]
+      ]
+    },
+    {
+      "name": "bottoms_cargo",
+      "vertices": 4103,
+      "morphs": [],
+      "bounds": [
+        [
+          -19.263710021972656,
+          21.49466323852539
+        ],
+        [
+          17.0,
+          110.0
+        ],
+        [
+          -6.949999809265137,
+          9.57369327545166
+        ]
+      ]
+    },
+    {
+      "name": "bottoms_sport",
+      "vertices": 2465,
+      "morphs": [],
+      "bounds": [
+        [
+          -21.035486221313477,
+          23.5303955078125
+        ],
+        [
+          70.0,
+          110.0
+        ],
+        [
+          -6.949999809265137,
+          9.25
+        ]
+      ]
+    },
+    {
+      "name": "bottoms_utility",
+      "vertices": 3623,
+      "morphs": [],
+      "bounds": [
+        [
+          -19.75275993347168,
+          22.149385452270508
+        ],
+        [
+          62.5,
+          110.0
+        ],
+        [
+          -6.949999809265137,
+          9.57369327545166
+        ]
+      ]
+    }
+  ],
+  "accessories": {
+    "meshes": [
+      {
+        "name": "hair_ponytail",
+        "vertices": 6916,
+        "polygons": 6727,
+        "shapes": []
+      },
+      {
+        "name": "smoke_cigar",
+        "vertices": 1742,
+        "polygons": 1597,
+        "shapes": []
+      },
+      {
+        "name": "bubblegum",
+        "vertices": 1968,
+        "polygons": 1922,
+        "shapes": [
+          "bubbleInflate",
+          "bubblePop"
+        ]
+      }
+    ],
+    "bones": [
+      {
+        "name": "MFER_Phys_Ponytail_01",
+        "head": [
+          13,
+          237,
+          -35
+        ],
+        "tail": [
+          45,
+          238,
+          -47
+        ],
+        "parent": "mixamorig:Head"
+      },
+      {
+        "name": "MFER_Phys_Ponytail_02",
+        "head": [
+          45,
+          238,
+          -47
+        ],
+        "tail": [
+          48,
+          210,
+          -47
+        ],
+        "parent": "MFER_Phys_Ponytail_01"
+      },
+      {
+        "name": "MFER_Phys_Ponytail_03",
+        "head": [
+          48,
+          210,
+          -47
+        ],
+        "tail": [
+          29,
+          181,
+          -30
+        ],
+        "parent": "MFER_Phys_Ponytail_02"
+      }
+    ],
+    "chains": [
+      {
+        "id": "Ponytail",
+        "category": "hair",
+        "meshes": [
+          "hair_ponytail"
+        ],
+        "bones": [
+          {
+            "name": "MFER_Phys_Ponytail_01",
+            "tail": [
+              0,
+              34.19064199455752,
+              0
+            ]
+          },
+          {
+            "name": "MFER_Phys_Ponytail_02",
+            "tail": [
+              0,
+              28.160255680657446,
+              0
+            ]
+          },
+          {
+            "name": "MFER_Phys_Ponytail_03",
+            "tail": [
+              0,
+              38.61346915261564,
+              0
+            ]
+          }
+        ],
+        "stiffness": 42,
+        "damping": 5.6,
+        "maxAngle": 0.38,
+        "gravity": [
+          0,
+          -0.1,
+          0
+        ],
+        "radius": 1.4,
+        "colliderIds": [
+          "head",
+          "upper_back"
+        ]
+      }
+    ]
+  },
+  "animals": {
+    "traits": [
+      "axolotl",
+      "rabbit",
+      "fox",
+      "shark"
+    ],
+    "aliases": [
+      [
+        "shirt_hoodie_up_green",
+        "hoodie_axolotl"
+      ],
+      [
+        "shirt_hoodie_green",
+        "shirt_axolotl"
+      ],
+      [
+        "shirt_hoodie_up_green",
+        "hoodie_rabbit"
+      ],
+      [
+        "shirt_hoodie_green",
+        "shirt_rabbit"
+      ],
+      [
+        "shirt_hoodie_up_green",
+        "hoodie_fox"
+      ],
+      [
+        "shirt_hoodie_green",
+        "shirt_fox"
+      ],
+      [
+        "shirt_hoodie_up_green",
+        "hoodie_shark"
+      ],
+      [
+        "shirt_hoodie_green",
+        "shirt_shark"
+      ]
+    ],
+    "chains": [],
+    "references": {
+      "axolotl": "axolotlhoodie.png",
+      "rabbit": "rabbithoodie.png",
+      "fox": "foxhoodie.png",
+      "shark": "sharkhoodie.png"
+    },
+    "models": {
+      "axolotl": {
+        "hoodVertices": 10623,
+        "shirtVertices": 7306,
+        "details": "Lavender fleece; six branching pink gills; embroidered dot eyes and small smile."
+      },
+      "rabbit": {
+        "hoodVertices": 5593,
+        "shirtVertices": 7560,
+        "details": "Snow fleece; asymmetric pink-lined long ears; red eyes; pink nose; small carrot chest badge."
+      },
+      "fox": {
+        "hoodVertices": 6611,
+        "shirtVertices": 8466,
+        "details": "Orange fleece; black-tipped pointed ears; warm cream cheeks and chest; black plush nose."
+      },
+      "shark": {
+        "hoodVertices": 7181,
+        "shirtVertices": 8516,
+        "details": "Slate fleece; plush dorsal fin; ivory felt teeth following the actual face opening; black hand-sewn seams.",
+        "teeth": [
+          {
+            "x": -23,
+            "y": 229.6,
+            "upper": true
+          },
+          {
+            "x": -17,
+            "y": 231.6,
+            "upper": true
+          },
+          {
+            "x": -11,
+            "y": 232.35,
+            "upper": true
+          },
+          {
+            "x": -5,
+            "y": 233.35,
+            "upper": true
+          },
+          {
+            "x": 1,
+            "y": 233.85,
+            "upper": true
+          },
+          {
+            "x": 7,
+            "y": 233.85,
+            "upper": true
+          },
+          {
+            "x": 13,
+            "y": 232.85,
+            "upper": true
+          },
+          {
+            "x": 19,
+            "y": 231.35,
+            "upper": true
+          },
+          {
+            "x": -20,
+            "y": 179.15,
+            "upper": false
+          },
+          {
+            "x": -13,
+            "y": 174.9,
+            "upper": false
+          },
+          {
+            "x": 8,
+            "y": 174.4,
+            "upper": false
+          },
+          {
+            "x": 15,
+            "y": 178.4,
+            "upper": false
+          },
+          {
+            "x": 22,
+            "y": 182.9,
+            "upper": false
+          }
+        ]
+      }
+    },
+    "earLiningProjection": [
+      {
+        "panel": "Rabbit pink ear lining",
+        "vertices": 216,
+        "misses": 0
+      },
+      {
+        "panel": "Rabbit pink ear lining",
+        "vertices": 216,
+        "misses": 0
+      },
+      {
+        "panel": "Fox cream inner ear",
+        "vertices": 192,
+        "misses": 0
+      },
+      {
+        "panel": "Fox cream inner ear",
+        "vertices": 192,
+        "misses": 0
+      }
+    ]
+  },
+  "bottoms": {
+    "objects": [
+      {
+        "name": "bottoms_jeans",
+        "title": "Faded denim",
+        "vertices": 3729,
+        "polygons": 3552,
+        "hemY": 13.0,
+        "maxInfluences": 3,
+        "bodySamples": 713,
+        "maximumBodyToFabricRadius": 0.655740501027393
+      },
+      {
+        "name": "bottoms_cargo",
+        "title": "Charcoal cargos",
+        "vertices": 4103,
+        "polygons": 3872,
+        "hemY": 17.0,
+        "maxInfluences": 3,
+        "bodySamples": 667,
+        "maximumBodyToFabricRadius": 0.6304483727353363
+      },
+      {
+        "name": "bottoms_sport",
+        "title": "Retro gym shorts",
+        "vertices": 2465,
+        "polygons": 2354,
+        "hemY": 70.0,
+        "maxInfluences": 3,
+        "bodySamples": 97,
+        "maximumBodyToFabricRadius": 0.486946998121009
+      },
+      {
+        "name": "bottoms_utility",
+        "title": "Sand utility shorts",
+        "vertices": 3623,
+        "polygons": 3392,
+        "hemY": 62.5,
+        "maxInfluences": 3,
+        "bodySamples": 174,
+        "maximumBodyToFabricRadius": 0.5226369921449325
+      }
+    ],
+    "chains": [],
+    "rig": "Connected cloth waist/crotch; hip and leg bones."
+  },
+  "capsule": {
+    "method": "unchanged upper section of original skull",
+    "cutHeight": 229.5,
+    "normalHeadTop": 244.12335205078125,
+    "domeTop": 244.12335205078125,
+    "headphones": "original, unchanged"
+  },
+  "scalpFit": {
+    "source": "type_plain",
+    "method": "outward_only_local_bvh",
+    "vertexCount": 960,
+    "vertexClearance": 1.0,
+    "sampledMinimumClearance": 0.7481787727192426,
+    "clearanceSampleCount": 53760,
+    "unchangedScalpVertices": 883,
+    "maximumOutwardDisplacement": 1.31094385977242,
+    "preservedTailVertexStart": 2087,
+    "preservedTailVertexEndExclusive": 6604,
+    "rootRingVertexStart": 2087,
+    "rootRingVertexCount": 24,
+    "connectorVertexStart": 6604,
+    "connectorVertexEndExclusive": 6916,
+    "connectorContactVertexStart": 6892,
+    "rootContactBone": "mixamorig:Head",
+    "connectorBurialInScalp": 1.6,
+    "connectorPenetrationIntoTail": 0.8,
+    "connectorEndRadiusRatio": 0.94,
+    "nativeUnits": true
+  },
+  "ridgeFit": {
+    "sourceHeadphones": [
+      "headphones_black",
+      "headphones_white",
+      "headphones_red",
+      "headphones_green",
+      "headphones_pink"
+    ],
+    "method": "shortened_sweep_with_buried_taper",
+    "minimumSurfaceDistance": 2.5485968589782715,
+    "intersectionPairCount": 0,
+    "ridgeVertexRanges": [
+      [
+        960,
+        1121
+      ],
+      [
+        1121,
+        1282
+      ],
+      [
+        1282,
+        1443
+      ],
+      [
+        1443,
+        1604
+      ],
+      [
+        1604,
+        1765
+      ],
+      [
+        1765,
+        1926
+      ],
+      [
+        1926,
+        2087
+      ]
+    ],
+    "retainedPathFractions": [
+      0.63,
+      0.59,
+      0.5449999999999999,
+      0.495,
+      0.43500000000000005,
+      0.365,
+      0.28
+    ],
+    "headphonesModified": false,
+    "nativeUnits": true
+  },
+  "bones": 74,
+  "costumesV5": {
+    "count": 27,
+    "ids": [
+      "bear",
+      "bull",
+      "chicken",
+      "dragon",
+      "sonic",
+      "trex",
+      "pepe",
+      "kiki",
+      "masterchan",
+      "mlee",
+      "among_us_blue",
+      "among_us_green",
+      "among_us_pink",
+      "breaking_bad",
+      "death",
+      "grandma_wolf",
+      "human",
+      "lobster",
+      "pickle_rick",
+      "plague_doctor",
+      "royal",
+      "scream",
+      "sheep_black",
+      "sheep_white",
+      "snow_white",
+      "stimpy",
+      "wicked_witch"
+    ],
+    "source": "main extended mfers",
+    "localOnly": true,
+    "batchReports": [
+      "costumes-themed-build.json",
+      "costumes-creatures-build.json",
+      "costumes-icons-build.json"
+    ],
+    "qualityReport": "costumes-quality-v5.json"
+  }
+}
