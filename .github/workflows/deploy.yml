@@ -23,6 +23,7 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci --no-audit --no-fund
+      - run: npm test
       - uses: actions/configure-pages@v5
         id: pages
       - run: npm run build

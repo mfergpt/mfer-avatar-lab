@@ -17,3 +17,7 @@ The GitHub Actions workflow deploys the `codex/halloween-lab` branch to GitHub P
 Set a DNS CNAME for `lab` to the owning GitHub account's `<account>.github.io`, then set the custom domain in repository Pages settings and enable HTTPS once GitHub has issued the certificate. This is a separate Pages site from the existing creator and playground.
 
 Only `public/` and bundled application files enter the build; local status/audit pages are not included.
+
+## Animated download
+
+The viewer’s Download GLB button bakes six seconds of the displayed animation into a loop, including the base and costume rigs, facial morphs, and spring motion. Only selected geometry and the dormant tongue are included. Keep the tab visible while preparing the file. Downloaded motion plays in standard GLB viewers without the lab runtime. `npm test` verifies both skins, facial animation, selected-mesh filtering, round-trip deformation, and source preservation.

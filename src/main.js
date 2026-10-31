@@ -11,6 +11,7 @@ import { normalizeMouthFlexPose } from '@avatar/integration/mouth-lipsync.ts';
 import { createMouthProps } from '@avatar/integration/mouth-props.ts';
 import buildInfo from './model-build.json';
 import costumeCatalog from './costume-catalog.json';
+import { captureAnimatedPreview } from './export-preview.js';
 
 const $ = (selector) => document.querySelector(selector);
 const clamp = (n, min = 0, max = 1) => Math.min(max, Math.max(min, Number.isFinite(n) ? n : 0));
@@ -42,12 +43,12 @@ const costumeOptions = document.createElement('optgroup');
 costumeOptions.label = 'themed hoodies + costumes';
 for (const item of costumeCatalog) { const option = document.createElement('option'); option.value = item.id; option.textContent = item.label; costumeOptions.append(option); }
 $('#clothes').append(costumeOptions);
-const halloweenOrder = ['scream', 'death', 'wicked_witch', 'plague_doctor', 'mlee'];
+const halloweenOrder = ['death', 'wicked_witch', 'plague_doctor', 'mlee'];
 presets.sort((a, b) => {
   const rank = p => halloweenOrder.includes(p.id) ? halloweenOrder.indexOf(p.id) : halloweenOrder.length;
   return rank(a) - rank(b);
 });
-const initialPreset = presets.find(preset => preset.id === 'scream');
+const initialPreset = presets.find(preset => preset.id === 'death');
 let presetCategory = initialPreset.category || 'originals';
 let selected = { ...baseline, ...initialPreset.traits }, currentPreset = initialPreset.id, expression = 'neutral';
 let avatar, source, driver, mixer, addon, addonSource, addonPhysics, ready = false;
@@ -83,6 +84,7 @@ const fill = new THREE.DirectionalLight(0xdde7ff, 1.1); fill.position.set(4, 2, 
 const ground = new THREE.Mesh(new THREE.CircleGeometry(.58, 64), new THREE.MeshBasicMaterial({ color: '#6f7861', transparent: true, opacity: .035, depthWrite: false }));
 ground.rotation.x = -Math.PI / 2; ground.position.y = -.012; scene.add(ground);
 const group = new THREE.Group(); scene.add(group);
+const previewObservers = new Set();
 function resize() { const { width, height } = wrap.getBoundingClientRect(); renderer.setSize(width, height, false); camera.aspect = width / Math.max(1, height); camera.updateProjectionMatrix(); }
 new ResizeObserver(resize).observe(wrap); resize();
 
@@ -190,7 +192,7 @@ async function loadBase() {
     $('#progress').removeAttribute('value');
     await loadAddon();
     ready = true; updateSelection();
-    $('#loading').hidden = true; $('#webcam').disabled = false;
+    $('#loading').hidden = true; $('#webcam').disabled = false; $('#download-glb').disabled = false;
     setView(presets.find(p => p.id === currentPreset)?.view || 'face');
   } catch (error) { diagnostics.errors.push(String(error)); $('#loading-text').textContent = 'Couldn’t load your mfer. Check your connection and try again.'; $('#retry').hidden = false; console.error(error); }
 }
@@ -325,8 +327,38 @@ function render(now) {
     camera.position.lerpVectors(cameraTransition.from, cameraTransition.to, easing); orbit.target.lerpVectors(cameraTransition.fromTarget, cameraTransition.target, easing);
     if (t === 1) cameraTransition = null;
   }
+  group.updateMatrixWorld(true);
+  for (const observer of previewObservers) observer(now);
   orbit.update(); renderer.render(scene, camera); requestAnimationFrame(render);
 }
+$('#download-glb').addEventListener('click', async () => {
+  if (!ready) return;
+  const button = $('#download-glb'), status = $('#export-status');
+  const controls = [...document.querySelectorAll('[data-preset], [data-category], .mix select')];
+  const disabled = controls.map(control => control.disabled);
+  controls.forEach(control => { control.disabled = true; });
+  button.disabled = true; status.textContent = '';
+  try {
+    const data = await captureAnimatedPreview(group, {
+      subscribe(observer) { previewObservers.add(observer); return () => previewObservers.delete(observer); },
+      onProgress(progress) { button.textContent = `preparing… ${Math.round(progress * 100)}%`; },
+      selection: { ...selected },
+    });
+    button.textContent = 'saving GLB…';
+    const url = URL.createObjectURL(new Blob([data], { type: 'model/gltf-binary' }));
+    const link = document.createElement('a');
+    link.href = url; link.download = `mfer-lab-${selected.clothes === 'none' ? selected.type : selected.clothes}-animated.glb`;
+    document.body.append(link); link.click(); link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 60000);
+    status.textContent = 'animated GLB ready';
+  } catch (error) {
+    console.error(error);
+    status.textContent = error.message || 'Couldn’t prepare your GLB. Try again.';
+  } finally {
+    controls.forEach((control, index) => { control.disabled = disabled[index]; });
+    button.disabled = false; button.textContent = 'download GLB ↓';
+  }
+});
 // Read-only inspection helpers make it possible to validate local assets without camera permission.
 window.traitLab = { diagnostics, setPreset, setView, setExpression, get selection() { return { ...selected }; }, get avatar() { return avatar; }, get addon() { return addon; }, get camera() { return camera; }, get controls() { return orbit; }, get driver() { return driver; }, get addonPhysics() { return addonPhysics; }, get captureActive() { return captureActive; }, get bubbleWeight() { return bubbleWeight; }, get renderer() { return renderer; } };
 setPreset(initialPreset.id); requestAnimationFrame(render); loadBase();
