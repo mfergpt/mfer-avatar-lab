@@ -11,6 +11,7 @@ import { normalizeMouthFlexPose } from '@avatar/integration/mouth-lipsync.ts';
 import { createMouthProps } from '@avatar/integration/mouth-props.ts';
 import buildInfo from './model-build.json';
 import costumeCatalog from './costume-catalog.json';
+import addonAsset from './assets/new-traits.glb?url';
 import { captureAnimatedPreview } from './export-preview.js';
 
 const $ = (selector) => document.querySelector(selector);
@@ -198,7 +199,7 @@ async function loadBase() {
 }
 async function loadAddon() {
   try {
-    addonSource = await loader.loadAsync(`${import.meta.env.BASE_URL}assets/new-traits.glb`, event => { if (event.total) $('#progress').value = event.loaded / event.total * 100; });
+    addonSource = await loader.loadAsync(addonAsset, event => { if (event.total) $('#progress').value = event.loaded / event.total * 100; });
     addon = clone(addonSource.scene); group.add(addon);
     const baseBones = new Map(); avatar.traverse(object => { if (object.isBone) baseBones.set(normalName(object.name), object); });
     addon.traverse(object => {
